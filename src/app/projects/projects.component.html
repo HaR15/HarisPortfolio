@@ -1,0 +1,9 @@
+<div class="component">
+    <span class="projects-title">Projects</span>
+    <div class="projects">
+        <div class="project" *ngFor="let project of projects">        
+            <a href="{{project.url}}"><img src="{{project.image}}"></a>
+            <div class="project-description">{{project.description}}</div>            
+        </div>
+    </div>
+</div>

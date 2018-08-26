@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$font-color-text: white;
+$font-color-title: #b6e6bd;
+$font-size-base: 20px;
+$font-size-title: 40px;
+$font-family-base: 'Roboto', 'sans-serif';
+$background-base: #0a0a29;
+$line-height-base: 1.6;
+
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: $background-base;
+    color: $font-color-text;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+button, li {
+    outline: none;
+}
+
+::selection {
+    background: $font-color-text;
+    color: $font-color-title;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    text-align: center;
+  }  
+
+.cover * { 
+    display: block;
+    text-align: left;
+}
+
+.cover-title {
+    color: yellow;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 100px;
+}
+
+.cover-text {
+    margin-left: 10%;
+    font-size: 50px;
+}
+
+.cover-contact-btn {
+    background: transparent;
+    font-family: $font-family-base;
+    font-size: 20px;
+    color: $font-color-text;
+    margin: 40px 10%;
+    height: auto;
+    padding: 10px;
+}
+
+.cover-contact-btn:hover {
+    transition: all ease-out 0.2s;
+    background: $font-color-text;
+    color: $background-base;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-end;
+    height: 50px;
+    width: 95%;
+    margin-top: 40px;
+    right: 10px;
+    color: $font-color-title;
+}
+
+.navLink {
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: center;
+    margin-left: 40px;
+    outline: none;
+}
+
+.navLink:hover {
+    transition: all ease 0.1s;
+    color: white;
+}
+
+.component {
+    width: 75%;
+    margin: auto;
+}
+
+.profile-pic {
+    border-radius: 100%;
+    width: 200px;
+    display: block;
+    border: 2px solid white;
+    margin: auto;
+}
+
+.about-title {
+    color: $font-color-title;
+    font-size: $font-size-title;
+}
+
+.about-text {
+    color: $font-color-text;
+    text-align: justify;
+    line-height: $line-height-base;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projects-title {
+    color: $font-color-title;
+    font-size: $font-size-title;
+}
+
+.project {
+    margin: 20px 10px 20px 10px;
+    padding: 2px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: $font-color-title;
+}
+
+.project img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-description {
+    font-size: 16px;
+    color: #0a0a29;
+    text-align: justify;
+    padding: 40px;
+    line-height: 1.6;
+    position: absolute;
+    width: auto;
+    height: 60%;
+    overflow: auto;
+    top: 100%;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.project:hover .project-description {
+    top: 0;
+}
