@@ -3,9 +3,9 @@
 <div class="body">
   <div class="navbar">
     <li routerLink="" class="navLink">HOME</li>
-    <li routerLink="about" class="navLink">ABOUT</li>
-    <li routerLink="projects" class="navLink">PROJECTS</li>
-    <a href="mailto:haris005@gmail.com"><li class="navLink">CONTACT</li></a>
+    <li routerLink="about" class="navLink">/ ABOUT</li>
+    <li routerLink="projects" class="navLink" ngclick="e.target.style.color = 'green'">/ PROJECTS</li>
+    <li class="navLink" onclick="location.href='mailto:haris005@gmail.com'">/ CONTACT</li>
   </div>
   <div class="main">
     <router-outlet></router-outlet>

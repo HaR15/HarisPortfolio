@@ -1,11 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+// font imports
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// variables
 $font-color-text: white;
 $font-color-title: #98ffa7;
+$font-color-cover-title: #98ffa7;
+$font-family-cover-title: 'Work Sans';
+$font-size-cover-title: 100px;
+$font-size-cover-text: 30px;
 $font-size-base: 20px;
 $font-size-title: 50px;
-$font-family-base: sans-serif; //'Roboto', 'sans-serif';
+$font-family-base: 'Raleway'; //'Roboto', 'sans-serif';
+$font-family-body-text: 'Raleway';
+$font-size-body-text: 18px;
 $background-base: #0a0a29;
 $line-height-base: 1.6;
 
@@ -36,13 +47,15 @@ button, li {
 .footer {
     position: absolute;
     bottom: 0;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px;
     font-size: 14px;
     text-align: center;
+    overflow: hidden;
     color: grey;
 
     div:nth-child(1) {
@@ -67,15 +80,18 @@ button, li {
 }
 
 .cover-title {
-    color: yellow;
-    margin-left: 10%;
-    margin-top: 10%;
-    font-size: 100px;
+    color: $font-color-cover-title;
+    // margin-left: 10%;
+    text-align: center;
+    margin-top: 12%;
+    font-size: $font-size-cover-title;
+    font-family: $font-family-cover-title;
 }
 
 .cover-text {
-    margin-left: 10%;
-    font-size: 50px;
+    // margin-left: 10%;
+    text-align: center;
+    font-size: $font-size-cover-text;
 }
 
 .cover-contact-btn {
@@ -111,18 +127,30 @@ button, li {
     vertical-align: center;
     margin-left: 40px;
     outline: none;
-    color: $font-color-title;
+    color: darken($font-color-title, 55);
+}
+
+@media only screen and (max-width: 768px) {
+    .navLink {
+        margin-left: 10px;
+    }
 }
 
 .navLink:hover {
-    transition: all ease 0.1s;
-    color: white;
+    transition: all ease 0.5s;
+    color: $font-color-title;
 }
 
 .component {
-    width: 75%;
+    width: 70%;
     margin: auto;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .component {
+        width: 90%;
+    }
 }
 
 .profile-pic {
@@ -130,7 +158,7 @@ button, li {
     width: 200px;
     display: block;
     border: 2px solid white;
-    margin: 20px auto;
+    margin: 5px auto;
 }
 
 .about-title {
@@ -142,6 +170,8 @@ button, li {
     color: $font-color-text;
     text-align: justify;
     line-height: $line-height-base;
+    font-family: $font-family-body-text;
+    font-size: $font-size-body-text;
 }
 
 .projects {
@@ -165,7 +195,7 @@ button, li {
     background: $font-color-text;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .project{
         width: 100%;
     }
@@ -195,7 +225,7 @@ button, li {
     padding: 40px;
     line-height: 1.6;
     position: absolute;
-    width: 90%;
+    // width: 90%;
     height: 100%;
     overflow: auto;
     top: 100%;
